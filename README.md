@@ -32,7 +32,7 @@ Command line tools and services to automate repetitive tasks
 - Project should look like this
 <br /><img src="imgs/Screenshot%202019-06-21%20at%2014.48.32.png" width=200 /> 
 
-- Open "main.swift"
+- Open "main.swift"; Depending on executable name, do different things. (trick used by swift compiler)
 ```swift
 switch Swift.CommandLine.arguments.first {
 case "cmd-user":
@@ -143,5 +143,35 @@ class UserApp {
 
 - Add Script Build Phase "Duplicate Executable"
 ```shell
-cp /usr/local/bin/rhino /usr/local/bin/cmd-user
+cp /usr/local/bin/cmd /usr/local/bin/cmd-user
+```
+
+- Make sure to add PATH
+- Run Script in terminal
+```
+cmd-user | pbcopy; pbpaste
+```
+
+- Create iOS tabbed app
+- Code to decode json in view did appear
+```swift
+if let data = UIPasteboard.general.string?.data(using: .utf8) {
+            struct Patient: Decodable {
+                let id: String
+                let firstName: String
+                let lastName: String
+                let birthday: Date
+                let gender: SexId
+            }
+
+            let decoder = JSONDecoder()
+            decoder.dateDecodingStrategy = DateFormatter.dateCodingStrategy
+            if let patient = try? decoder.decode(Patient.self, from: data) {
+                firstNameLabel.text = patient.firstName
+                lastNameLabel.text = patient.lastName
+                idLabel.text = patient.id
+                birthdateLabel = patient.birthday
+                viewModel?.mutablePatientCgmModel.gender.value = patient.gender
+            }
+        }
 ```
