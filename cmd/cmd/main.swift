@@ -13,6 +13,7 @@ case "cmd-user":
     UserApp().run()
     
 default:
+    UserApp().run()
     break
 }
 

@@ -36,9 +36,10 @@ Command line tools and services to automate repetitive tasks
 ```swift
 switch Swift.CommandLine.arguments.first {
 case "cmd-user":
-    User().run()
+    UserApp().run()
     
 default:
+    UserApp().run()
     break
 }
 ```
