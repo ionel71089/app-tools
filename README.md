@@ -185,3 +185,6 @@ USER_HEADER_SEARCH_PATHS = ${SDK_DIR}/usr/include/libxml2
 USER_HEADER_SEARCH_PATHS = ${SDK_DIR}/usr/include/libxml2
 ```
 
+- https://github.com/onevcat/Rainbow for colored text
+
+## Next: Create server and use https://github.com/krzysztofzablocki/KZFileWatchers instead of UIPasteboard
