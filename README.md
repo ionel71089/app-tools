@@ -29,4 +29,6 @@ Command line tools and services to automate repetitive tasks
 
 
 - Clone https://github.com/cezheng/Fuzi (for scraping a site) and add it to the workspace as a local package (had some error when )
-- 
+- Project should look like this
+<br /><img src="imgs/Screenshot%202019-06-21%20at%2014.48.32.png" width=200 /> 
+
