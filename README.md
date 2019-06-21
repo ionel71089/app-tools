@@ -18,5 +18,7 @@ Command line tools and services to automate repetitive tasks
 <br /><img src="imgs/Screenshot%202019-06-21%20at%2014.04.21.png" width=200 /> 
 
 - Name it "cmd" and add it to the workspace
-<br /><img src="imgs/Screenshot%202019-06-21%20at%2014.05.04.png" width=200 /> 
+<span><br />
+<img src="imgs/Screenshot%202019-06-21%20at%2014.05.04.png" width=200 /> 
 <img src="imgs/Screenshot%202019-06-21%20at%2014.05.24.png" width=200 /> 
+</span>
