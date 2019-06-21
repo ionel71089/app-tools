@@ -33,7 +33,7 @@ Command line tools and services to automate repetitive tasks
 <br /><img src="imgs/Screenshot%202019-06-21%20at%2014.48.32.png" width=200 /> 
 
 - Open "main.swift"
-```
+```swift
 switch Swift.CommandLine.arguments.first {
 case "cmd-user":
     User().run()
@@ -44,7 +44,7 @@ default:
 ```
 
 - Add the "User.swift" file
-```
+```swift
 import Foundation
 import CommandLineKit
 
