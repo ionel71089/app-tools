@@ -8,6 +8,7 @@
 
 import Foundation
 import CommandLineKit
+import Fuzi
 
 class UserApp {
     let VERSION = "1.0.0"

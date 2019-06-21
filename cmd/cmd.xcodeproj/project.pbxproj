@@ -11,13 +11,7 @@
 		52791D9522BCF6AC00B386D8 /* CommandLineKit in Frameworks */ = {isa = PBXBuildFile; productRef = 52791D9422BCF6AC00B386D8 /* CommandLineKit */; };
 		52791D9A22BCFF8200B386D8 /* UserApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52791D9922BCFF8200B386D8 /* UserApp.swift */; };
 		52791DA022BD0D1100B386D8 /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 52791D9F22BD0D1100B386D8 /* libxml2.2.dylib */; };
-		52791DAA22BD0D7300B386D8 /* NodeSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52791DA322BD0D7300B386D8 /* NodeSet.swift */; };
-		52791DAB22BD0D7300B386D8 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52791DA422BD0D7300B386D8 /* Node.swift */; };
-		52791DAC22BD0D7300B386D8 /* Element.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52791DA522BD0D7300B386D8 /* Element.swift */; };
-		52791DAD22BD0D7300B386D8 /* Queryable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52791DA622BD0D7300B386D8 /* Queryable.swift */; };
-		52791DAE22BD0D7300B386D8 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52791DA722BD0D7300B386D8 /* Document.swift */; };
-		52791DAF22BD0D7300B386D8 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52791DA822BD0D7300B386D8 /* Helpers.swift */; };
-		52791DB022BD0D7300B386D8 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52791DA922BD0D7300B386D8 /* Error.swift */; };
+		52791DB222BD132C00B386D8 /* Fuzi in Frameworks */ = {isa = PBXBuildFile; productRef = 52791DB122BD132C00B386D8 /* Fuzi */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -39,13 +33,6 @@
 		52791D9B22BD0C6300B386D8 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		52791D9D22BD0C9D00B386D8 /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = usr/lib/libxml2.2.tbd; sourceTree = SDKROOT; };
 		52791D9F22BD0D1100B386D8 /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = ../../../../../usr/lib/libxml2.2.dylib; sourceTree = "<group>"; };
-		52791DA322BD0D7300B386D8 /* NodeSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NodeSet.swift; path = ../../../../Fuzi/Sources/NodeSet.swift; sourceTree = "<group>"; };
-		52791DA422BD0D7300B386D8 /* Node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Node.swift; path = ../../../../Fuzi/Sources/Node.swift; sourceTree = "<group>"; };
-		52791DA522BD0D7300B386D8 /* Element.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Element.swift; path = ../../../../Fuzi/Sources/Element.swift; sourceTree = "<group>"; };
-		52791DA622BD0D7300B386D8 /* Queryable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Queryable.swift; path = ../../../../Fuzi/Sources/Queryable.swift; sourceTree = "<group>"; };
-		52791DA722BD0D7300B386D8 /* Document.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Document.swift; path = ../../../../Fuzi/Sources/Document.swift; sourceTree = "<group>"; };
-		52791DA822BD0D7300B386D8 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Helpers.swift; path = ../../../../Fuzi/Sources/Helpers.swift; sourceTree = "<group>"; };
-		52791DA922BD0D7300B386D8 /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Error.swift; path = ../../../../Fuzi/Sources/Error.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52791DB222BD132C00B386D8 /* Fuzi in Frameworks */,
 				52791DA022BD0D1100B386D8 /* libxml2.2.dylib in Frameworks */,
 				52791D9522BCF6AC00B386D8 /* CommandLineKit in Frameworks */,
 			);
@@ -81,7 +69,6 @@
 		52791D8B22BCF17600B386D8 /* cmd */ = {
 			isa = PBXGroup;
 			children = (
-				52791DA122BD0D6100B386D8 /* lib */,
 				52791D8C22BCF17600B386D8 /* main.swift */,
 				52791D9922BCFF8200B386D8 /* UserApp.swift */,
 			);
@@ -96,28 +83,6 @@
 				52791D9B22BD0C6300B386D8 /* libxml2.tbd */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		52791DA122BD0D6100B386D8 /* lib */ = {
-			isa = PBXGroup;
-			children = (
-				52791DA222BD0D6800B386D8 /* fuzi */,
-			);
-			path = lib;
-			sourceTree = "<group>";
-		};
-		52791DA222BD0D6800B386D8 /* fuzi */ = {
-			isa = PBXGroup;
-			children = (
-				52791DA722BD0D7300B386D8 /* Document.swift */,
-				52791DA522BD0D7300B386D8 /* Element.swift */,
-				52791DA922BD0D7300B386D8 /* Error.swift */,
-				52791DA822BD0D7300B386D8 /* Helpers.swift */,
-				52791DA422BD0D7300B386D8 /* Node.swift */,
-				52791DA322BD0D7300B386D8 /* NodeSet.swift */,
-				52791DA622BD0D7300B386D8 /* Queryable.swift */,
-			);
-			path = fuzi;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +103,7 @@
 			name = cmd;
 			packageProductDependencies = (
 				52791D9422BCF6AC00B386D8 /* CommandLineKit */,
+				52791DB122BD132C00B386D8 /* Fuzi */,
 			);
 			productName = cmd;
 			productReference = 52791D8922BCF17600B386D8 /* cmd */;
@@ -186,13 +152,6 @@
 			files = (
 				52791D9A22BCFF8200B386D8 /* UserApp.swift in Sources */,
 				52791D8D22BCF17600B386D8 /* main.swift in Sources */,
-				52791DAD22BD0D7300B386D8 /* Queryable.swift in Sources */,
-				52791DAF22BD0D7300B386D8 /* Helpers.swift in Sources */,
-				52791DAA22BD0D7300B386D8 /* NodeSet.swift in Sources */,
-				52791DAB22BD0D7300B386D8 /* Node.swift in Sources */,
-				52791DAE22BD0D7300B386D8 /* Document.swift in Sources */,
-				52791DB022BD0D7300B386D8 /* Error.swift in Sources */,
-				52791DAC22BD0D7300B386D8 /* Element.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,6 +332,10 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 52791D9322BCF6AC00B386D8 /* XCRemoteSwiftPackageReference "CommandLineKit" */;
 			productName = CommandLineKit;
+		};
+		52791DB122BD132C00B386D8 /* Fuzi */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Fuzi;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
