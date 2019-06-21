@@ -175,3 +175,13 @@ if let data = UIPasteboard.general.string?.data(using: .utf8) {
             }
         }
 ```
+
+- Set user search paths
+```
+//:configuration = Debug
+USER_HEADER_SEARCH_PATHS = ${SDK_DIR}/usr/include/libxml2
+
+//:configuration = Release
+USER_HEADER_SEARCH_PATHS = ${SDK_DIR}/usr/include/libxml2
+```
+

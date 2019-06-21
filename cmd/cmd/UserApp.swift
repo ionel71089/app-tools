@@ -72,12 +72,12 @@ class UserApp {
     }
     
     private func printVersion() {
-        print("banana")
-        print("""
-            \("\(appName) \(VERSION)".blue)
-            \("   ".onBlack)\("   ".onYellow)\("   ".onGreen)\("   ".onWhite)\("   ".onRed)\("   ".onBlue)
-            
-            """
-        )
+//        print("banana")
+//        print("""
+//            \("\(appName) \(VERSION)".blue)
+//            \("   ".onBlack)\("   ".onYellow)\("   ".onGreen)\("   ".onWhite)\("   ".onRed)\("   ".onBlue)
+//            
+//            """
+//        )
     }
 }
