@@ -3,11 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		52791D8D22BCF17600B386D8 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52791D8C22BCF17600B386D8 /* main.swift */; };
+		52791D9522BCF6AC00B386D8 /* CommandLineKit in Frameworks */ = {isa = PBXBuildFile; productRef = 52791D9422BCF6AC00B386D8 /* CommandLineKit */; };
+		52791D9822BCF9BC00B386D8 /* Fuzi in Frameworks */ = {isa = PBXBuildFile; productRef = 52791D9722BCF9BC00B386D8 /* Fuzi */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,6 +34,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52791D9822BCF9BC00B386D8 /* Fuzi in Frameworks */,
+				52791D9522BCF6AC00B386D8 /* CommandLineKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +47,7 @@
 			children = (
 				52791D8B22BCF17600B386D8 /* cmd */,
 				52791D8A22BCF17600B386D8 /* Products */,
+				52791D9622BCF9BC00B386D8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +67,13 @@
 			path = cmd;
 			sourceTree = "<group>";
 		};
+		52791D9622BCF9BC00B386D8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -78,6 +90,10 @@
 			dependencies = (
 			);
 			name = cmd;
+			packageProductDependencies = (
+				52791D9422BCF6AC00B386D8 /* CommandLineKit */,
+				52791D9722BCF9BC00B386D8 /* Fuzi */,
+			);
 			productName = cmd;
 			productReference = 52791D8922BCF17600B386D8 /* cmd */;
 			productType = "com.apple.product-type.tool";
@@ -106,6 +122,9 @@
 				Base,
 			);
 			mainGroup = 52791D8022BCF17600B386D8;
+			packageReferences = (
+				52791D9322BCF6AC00B386D8 /* XCRemoteSwiftPackageReference "CommandLineKit" */,
+			);
 			productRefGroup = 52791D8A22BCF17600B386D8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -280,6 +299,29 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		52791D9322BCF6AC00B386D8 /* XCRemoteSwiftPackageReference "CommandLineKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/IngmarStein/CommandLineKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		52791D9422BCF6AC00B386D8 /* CommandLineKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 52791D9322BCF6AC00B386D8 /* XCRemoteSwiftPackageReference "CommandLineKit" */;
+			productName = CommandLineKit;
+		};
+		52791D9722BCF9BC00B386D8 /* Fuzi */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Fuzi;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 52791D8122BCF17600B386D8 /* Project object */;
 }

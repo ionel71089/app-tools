@@ -21,3 +21,12 @@ Command line tools and services to automate repetitive tasks
 <br /><img src="imgs/Screenshot%202019-06-21%20at%2014.05.04.png" width=200 /> 
 <br /><img src="imgs/Screenshot%202019-06-21%20at%2014.05.24.png" width=200 /> 
 
+- Add Swift Package dependencies
+- https://github.com/IngmarStein/CommandLineKit for making command line apps
+<br /><img src="imgs/Screenshot%202019-06-21%20at%2014.27.06.png" width=200 /> 
+<br /><img src="imgs/Screenshot%202019-06-21%20at%2014.27.27.png" width=200 /> 
+<br /><img src="imgs/Screenshot%202019-06-21%20at%2014.27.47.png" width=200 /> 
+
+
+- Clone https://github.com/cezheng/Fuzi (for scraping a site) and add it to the workspace as a local package (had some error when )
+- 
