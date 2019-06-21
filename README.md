@@ -73,3 +73,75 @@ class UserApp {
 - Visit https://www.fakenamegenerator.com/gen-random-us-za.php
 - Inspect element and copy XPATH
 <br /><img src="imgs/Screenshot%202019-06-21%20at%2015.14.46.png" width=200 /> 
+- name: ``"//*[@id=\"details\"]/div[2]/div[2]/div/div[1]/h3"``
+- id: `"//*[@id=\"details\"]/div[2]/div[2]/div/div[2]/dl[2]/dd/text()"`
+- birthday: `"//*[@id=\"details\"]/div[2]/div[2]/div/div[2]/dl[6]/dd/text()"`
+
+- add code to run() function
+```swift
+    func run() {
+        do {
+            try cli.parse()
+            
+            if version.wasSet {
+                printVersion()
+                return
+            }
+            
+            let genders = ["male", "female"]
+            let gender = genders.randomElement()!
+            
+            let html = try String(contentsOf: URL(string: "https://www.fakenamegenerator.com/gen-\(gender)-us-za.php")!)
+            let doc = try HTMLDocument(string: html, encoding: String.Encoding.utf8)
+            let name = doc.firstChild(xpath: "//*[@id=\"details\"]/div[2]/div[2]/div/div[1]/h3")?.stringValue ?? ""
+            let id = doc.firstChild(xpath: "//*[@id=\"details\"]/div[2]/div[2]/div/div[2]/dl[2]/dd/text()")?.stringValue ?? ""
+            let birthday = doc.firstChild(xpath: "//*[@id=\"details\"]/div[2]/div[2]/div/div[2]/dl[6]/dd/text()")?.stringValue ?? ""
+            
+            let nameComponents = name.components(separatedBy: " ")
+            let firstName = nameComponents[0...1].joined(separator: " ")
+            let lastName = nameComponents[2]
+            
+            let df = DateFormatter()
+            df.dateFormat = "MMMM dd, yyyy"
+            let date = df.date(from: birthday)!
+            
+            let st = df.string(from: date)
+            
+            let json: [String: Any] = [
+                "firstName": firstName,
+                "lastName": lastName,
+                "id": id.trimmingCharacters(in: .whitespacesAndNewlines),
+                "birthday": st,
+                "gender": gender.uppercased()
+                
+            ]
+            print(jsonDebug(json))
+        } catch {
+            guard !version.wasSet else {
+                printVersion()
+                return
+            }
+            
+            cli.printUsage(error)
+            exit(EX_USAGE)
+        }
+    }
+    
+    private func printVersion() {
+        print("banana")
+        print("""
+            \("\(appName) \(VERSION)".blue)
+            \("   ".onBlack)\("   ".onYellow)\("   ".onGreen)\("   ".onWhite)\("   ".onRed)\("   ".onBlue)
+            
+            """
+        )
+    }
+```
+
+- Copy files phase
+<br /><img src="imgs/Screenshot%202019-06-21%20at%2016.09.46.png" width=200 />
+
+- Add Script Build Phase "Duplicate Executable"
+```shell
+cp /usr/local/bin/rhino /usr/local/bin/cmd-user
+```
