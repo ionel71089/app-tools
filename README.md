@@ -68,3 +68,8 @@ class UserApp {
     }
 }
 ```
+
+- Download and install Chrome
+- Visit https://www.fakenamegenerator.com/gen-random-us-za.php
+- Inspect element and copy XPATH
+<br /><img src="imgs/Screenshot%202019-06-21%20at%2015.14.46.png" width=200 /> 
