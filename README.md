@@ -3,8 +3,12 @@ Command line tools and services to automate repetitive tasks
 
 # Command line tool for scraping site and sharing it through PasteBoard
 
+- Use Xcode Beta
+
 - Create workspace 
-![](imgs/Screenshot%202019-06-21%20at%2013.46.46.png | width=100)
+<br /><img src="imgs/Screenshot%202019-06-21%20at%2013.46.46.png" width=200 />
+
 - Save it as "app-tools"
-![](imgs/Screenshot%202019-06-21%20at%2013.47.05.png)
+<br /><img src="imgs/Screenshot%202019-06-21%20at%2013.47.05.png" width=200 />
+
 - File -> New Console App
