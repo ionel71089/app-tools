@@ -32,3 +32,38 @@ Command line tools and services to automate repetitive tasks
 - Project should look like this
 <br /><img src="imgs/Screenshot%202019-06-21%20at%2014.48.32.png" width=200 /> 
 
+- Open "main.swift"
+```
+switch Swift.CommandLine.arguments.first {
+case "cmd-user":
+    User().run()
+    
+default:
+    break
+}
+```
+
+- Add the "User.swift" file
+```
+import Foundation
+import CommandLineKit
+
+class UserApp {
+    let VERSION = "1.0.0"
+    let appName = "User"
+
+    let cli = CommandLine()
+
+    let version = BoolOption(longFlag: "version", helpMessage: "Prints the version and exits")
+
+    init() {
+        cli.addOptions(
+            version
+        )
+    }
+    
+    func run() {
+        print("Hello World")
+    }
+}
+```

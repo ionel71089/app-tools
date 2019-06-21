@@ -8,5 +8,11 @@
 
 import Foundation
 
-print("Hello, World!")
+switch Swift.CommandLine.arguments.first {
+case "cmd-user":
+    UserApp().run()
+    
+default:
+    break
+}
 
